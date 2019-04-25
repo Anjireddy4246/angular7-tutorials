@@ -1,0 +1,54 @@
+<!-- <form #loginForm="ngForm" (ngSubmit)="onSubmitLoginForm()">
+  {{loginForm | json}}
+  <p>
+    <label>login Id:</label>
+    <input type="text" [(ngModel)]="loginForm.loginId" #loginId="ngModel" name="loginId" required>
+  </p>
+  <p *ngIf="loginId.errors?.required && loginId.touched" style="color:red;">
+    Name is required
+  </p>
+  <p>
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="loginForm.password" #password="ngModel" name="password" required>
+  </p>
+  <p *ngIf="password.errors?.required && password.touched" style="color:red;">
+    Password is required
+  </p>
+  <p>
+    <button type="submit" [disabled]="!loginForm1.valid">Submit</button>
+  </p> 
+</form> -->
+<!-- {{loginForm1.value | json}}<br/> -->
+<!-- <form #loginForm1="ngForm" (ngSubmit)="onSubmitLoginForm()">
+    <p>
+        <label>First Name:</label>
+        <input type="text" name="loginId" #loginId required ngModel>
+  </p>
+  
+  <p>
+        <label>Password:</label>
+        <input type="password" name="password" required ngModel>
+  </p>
+  <p>
+      <button type="submit" [disabled]="!loginForm1.valid">Submit</button>
+    </p>
+</form> -->
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <p>
+      <label>First Name:</label>
+      <input type="text" ngModel #loginId="ngModel" name="loginId1" required>
+    </p>
+    <p *ngIf="loginId.errors?.required && loginId.touched" style="color:red;">
+        Name is required
+    </p>
+    <p>
+      <label>Password:</label>
+      <input type="password" ngModel #password="ngModel" name="password" required>
+    </p>
+    <p *ngIf="password.errors?.required && password.touched" style="color:red;">
+        Password is required
+    </p>
+    <p>
+      <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+    </p>
+  </form>

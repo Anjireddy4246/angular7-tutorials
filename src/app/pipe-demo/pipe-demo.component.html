@@ -1,13 +1,35 @@
 <div style="text-align:center">
-    <h3>LowerCase & UpperCase Pipe</h3>
-  <p>{{sampleText}}</p>
-  <p>{{sampleText | uppercase }}</p>
-  <p>{{sampleText | lowercase}}</p>
-  <p>{{sampleText | wordcount}}</p>
+  <h3>LowerCase & UpperCase Pipe</h3>
+  <p> {{sampleText | lowercase}} </p>
+  <p> {{sampleText | uppercase}}  </p>
 </div>
+
 <div style="text-align:center">
-    <h3>Currency</h3>
-  <p>{{itemPrice | currency:'USD':true}}</p>
-  <p>{{itemPrice | currency:'USD':false }}</p>
-  <p>{{itemPrice | currency:'IND'}}</p>
-</div>
+    <h3> Currency Pipe</h3>
+    <p>{{ itemPrice | currency:'USD':true }}</p>      
+    <p>{{ itemPrice | currency:'EUR':false}}</p>
+    <p>{{ itemPrice | currency:'INR' }}</p>
+  </div>
+  <div style="text-align:center">
+      <h3>Decimal Pipe</h3>
+      <p> {{myNum1 | number}} </p>
+      <p> {{myNum2 | number}} </p>
+  </div>
+  <div style="text-align:center">
+      <h3>Date Pipe</h3>
+      <p>{{ currentDate | date:'fullDate' }}<p>      
+      <p>{{ numDateFormat | date:'medium' }}<p>
+      <p>{{ getYear | date:'yy' }}<p>
+      <p>{{ getTime | date:'Hm' }}<p>
+    </div>
+
+    <div style="text-align:center">
+        <h3>LowerCase & UpperCase Pipe</h3>
+        <!--output '35%'-->
+        <p>A: {{numA | percent}}</p>
+    </div>
+
+    <div style="text-align:center">
+        <p> Word Counter Pipe in action below</p>
+        <h1>{{ customText | wordcount }}</h1>
+      </div>

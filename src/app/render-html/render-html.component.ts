@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./render-html.component.less']
 })
 export class RenderHtmlComponent implements OnInit {
-  showNgIf = false;
+  showNgIf = true;
   showNgFor = true;
-  showNgSwicth = false;
-  showNgStyle = false;
-  showNgClass = false;
-  userLoggedIn = false;
-  show_nonBindable = false;
+  showNgSwicth = true;
+  showNgStyle = true;
+  showNgClass = true;
+  userLoggedIn = true;
+  show_nonBindable = true;
   constructor() { }
 
   ngOnInit() {

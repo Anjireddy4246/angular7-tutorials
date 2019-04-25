@@ -1,0 +1,25 @@
+<section>
+    <h1>Model-based Form Example:</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitModelBased()">
+      <p>
+        <label>First Name:</label>
+        <input type="text" formControlName="loginId">
+      </p>
+      <div class="error" style="color:red" *ngIf="loginForm.get('loginId').hasError('required') && loginForm.get('loginId').touched">
+        Name is required
+    </div>
+    <div class="error" style="color:red" *ngIf="loginForm.get('loginId').hasError('minlength') && loginForm.get('loginId').touched">
+        Minimum of 2 characters
+    </div>
+      <p>
+        <label>Password:</label>
+        <input type="password" formControlName="password">
+      </p>
+      <p>
+        <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+        <button (click)="partialUpdate()">Partial Update</button>
+        <button (click)="fullUpdate()">Full Update</button>
+        <button (click)="reset()">Cancel</button>
+      </p>
+    </form>
+  </section>
