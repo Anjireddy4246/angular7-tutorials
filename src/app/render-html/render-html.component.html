@@ -1,0 +1,52 @@
+<div *ngIf="showNgIf">
+  <h4>ngIf</h4>
+  <div *ngIf="userLoggedIn">
+    Hello User
+  </div>
+  <!-- <div *ngIf="userLoggedIn;else guest_content">
+    Hello  User
+  </div>
+  <ng-template #guest_content>
+    Hello Guest
+  </ng-template> -->
+  <!-- <div *ngIf="userLoggedIn;then user_content else guest_content">
+      This section will not get displayed
+    </div>
+    <ng-template #user_content>
+        Hello User
+      </ng-template>
+    <ng-template #guest_content>
+      Hello Guest
+    </ng-template> -->
+</div>
+<div *ngIf="showNgFor">
+  <h4>ngFor</h4>
+  <ul>
+      <li *ngFor="let person of people">{{person.name}}</li>
+    </ul>
+  <!-- <ul>
+    <li *ngFor="let person of people; let i=index">{{i+1}} {{person.name}}</li>
+  </ul> -->
+</div>
+<div *ngIf="showNgSwicth">
+    <h4>ngSwitch</h4>
+    <ul *ngFor="let person of people" [ngSwitch]="person.country">
+      <li *ngSwitchCase="'IND'" class="text-success">{{person.name}} - {{person.country}}</li>
+      <li *ngSwitchCase="'USA'" class="text-primary">{{person.name}} - {{person.country}}</li>
+      <li *ngSwitchCase="'RUS'" class="text-warning">{{person.name}} - {{person.country}}</li>
+      <li *ngSwitchDefault class="text-danger">{{person.name}} - {{person.country}}</li>
+    </ul>
+  </div>
+  <div *ngIf="showNgStyle">
+      <h4>ngStyle</h4>
+      <ul *ngFor="let person of people">
+        <li [ngStyle]="{'color':getColor(person.country)}">{{person.name}}- {{person.country}}</li>
+      </ul>
+    </div>
+    <div *ngIf="showNgClass">
+        <h4>ngClass</h4>
+        <ul *ngFor="let person of people">
+          <li [ngClass]="getCssClass(person.country)">{{person.name}}- {{person.country}}</li>
+        </ul>
+      </div>
+      <div *ngIf=show_nonBindable ngNonBindable>   To render the name variable we use this syntax <pre >{{ name }}</pre> </div>

@@ -1,0 +1,9 @@
+<div class="card card-block" movieCardHover>
+  <h4 class="card-title">{{movie.movieName}}</h4>
+  <!-- [style.display]="'none'" -->
+  <p class="card-text"
+  [hidden]="!movie.hide">{{movie.review}}</p>
+  <a (click)="movie.toggle()"
+  class="btn btn-warning">Show /Hide Review
+  </a>
+</div>
