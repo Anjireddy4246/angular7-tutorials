@@ -12,9 +12,9 @@ export class MovieslistComponent implements OnInit {
   constructor() { }
   ngOnInit() {
     this.movies = [
-      new Movie('Thor', 'Good Movie. Mjust watch in your lifetime'),
-      new Movie('Gladiator', 'Good Movie. Mjust watch in your lifetime'),
-      new Movie('EndGame', 'Good Movie. Mjust watch in your lifetime')
+      new Movie(1, 'Thor', 'Good Movie. Mjust watch in your lifetime'),
+      new Movie(2, 'Gladiator', 'Good Movie. Mjust watch in your lifetime'),
+      new Movie(3, 'EndGame', 'Good Movie. Mjust watch in your lifetime')
     ];
   }
 

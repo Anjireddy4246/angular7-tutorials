@@ -10,6 +10,9 @@ import { RenderHtmlComponent } from './render-html/render-html.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ModelDrivenFbFormComponent } from './model-driven-fb-form/model-driven-fb-form.component';
+import { ReactiveExtensionsComponent } from './reactive-extensions/reactive-extensions.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,14 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     WordcountPipe,
     RenderHtmlComponent,
     TemplateDrivenFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ModelDrivenFbFormComponent,
+    ReactiveExtensionsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MoviesModule,
     FormsModule,
     ReactiveFormsModule
   ],

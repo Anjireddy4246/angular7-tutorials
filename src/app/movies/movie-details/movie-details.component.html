@@ -1,0 +1,8 @@
+<div class="card card-block">
+  <h4 class="card-title">{{id}} -
+    {{movieName}}</h4>
+  <p class="card-text">{{review}}</p>
+</div>
+<a [routerLink]="['ratings']">Ratings</a>
+<a [routerLink]="['comments']">Comments</a>
+<router-outlet></router-outlet>

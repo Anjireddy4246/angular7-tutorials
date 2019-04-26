@@ -1,5 +1,5 @@
 <div class="card card-block" movieCardHover>
-  <h4 class="card-title">{{movie.movieName}}</h4>
+  <h4 class="card-title"><a [routerLink]="['/movie-reviews', movie.id,movie.movieName,movie.review]">{{movie.movieName}}</a> </h4>
   <!-- [style.display]="'none'" -->
   <p class="card-text"
   [hidden]="!movie.hide">{{movie.review}}</p>

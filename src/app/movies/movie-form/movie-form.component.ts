@@ -14,7 +14,7 @@ export class MovieFormComponent implements OnInit {
   }
 
   addMovie(movieName: string, review: string) {
-    this.movieCreated.emit(new Movie(movieName, review));
+    this.movieCreated.emit(new Movie(1, movieName, review));
   }
 
 }
