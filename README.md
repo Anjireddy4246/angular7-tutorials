@@ -1,1 +1,1 @@
-# angular7-tutorials
+# angular7-tutorials trainings
