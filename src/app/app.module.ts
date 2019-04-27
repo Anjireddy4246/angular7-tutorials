@@ -15,6 +15,7 @@ import { ReactiveExtensionsComponent } from './reactive-extensions/reactive-exte
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './httpinterceptors';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { httpInterceptorProviders } from './httpinterceptors';
     ReactiveFormComponent,
     ModelDrivenFbFormComponent,
     ReactiveExtensionsComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
