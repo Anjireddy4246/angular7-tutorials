@@ -13,6 +13,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ModelDrivenFbFormComponent } from './model-driven-fb-form/model-driven-fb-form.component';
 import { ReactiveExtensionsComponent } from './reactive-extensions/reactive-extensions.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { HttpClientModule } from '@angular/common/http';
+import { httpInterceptorProviders } from './httpinterceptors';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

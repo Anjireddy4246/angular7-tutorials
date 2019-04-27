@@ -1,9 +1,10 @@
 <div class="card card-block" movieCardHover>
-  <h4 class="card-title"><a [routerLink]="['/movie-reviews', movie.id,movie.movieName,movie.review]">{{movie.movieName}}</a> </h4>
+  <h4 class="card-title"><a [routerLink]="['/movie-reviews', movie.id,movie.movieName,movie.review]">{{movie.movieName}}</a>
+  </h4>
   <!-- [style.display]="'none'" -->
+  <!-- <ng-content></ng-content> -->
   <p class="card-text"
   [hidden]="!movie.hide">{{movie.review}}</p>
-  <a (click)="movie.toggle()"
-  class="btn btn-warning">Show /Hide Review
+  <a (click)="movie.toggle()" class="btn btn-warning">Show /Hide Review
   </a>
 </div>

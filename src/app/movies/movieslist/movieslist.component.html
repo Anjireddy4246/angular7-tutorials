@@ -1,4 +1,6 @@
 <div style='margin:10px'>
     <!-- <app-movie-form (movieCreated)="saveMovie($event)"></app-movie-form> -->
-    <app-movie *ngFor="let mov of movies" [movie]="mov"></app-movie>
+    <app-movie *ngFor="let mov of movies" [movie]="mov">
+        <h4>{{mov.review}}</h4>
+    </app-movie>
 </div>

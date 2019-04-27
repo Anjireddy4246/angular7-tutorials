@@ -9,6 +9,9 @@ import { MoviesRoutingModule } from './movies-routing.module';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieratingsComponent } from './movieratings/movieratings.component';
 import { MoviecommentsComponent } from './moviecomments/moviecomments.component';
+import { MoviesService } from './services/movies.service';
+import { CanActivate } from '@angular/router/src/utils/preactivation';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [MovieslistComponent, MovieComponent, MovieFormComponent, CardHoverDirective, MovieDetailsComponent, MovieratingsComponent, MoviecommentsComponent],
@@ -17,6 +20,7 @@ import { MoviecommentsComponent } from './moviecomments/moviecomments.component'
     MoviesRoutingModule,
     FormsModule
   ],
+  providers: [MoviesService, AuthGuard],
   exports: [MovieslistComponent, CardHoverDirective]
 })
 export class MoviesModule { }
